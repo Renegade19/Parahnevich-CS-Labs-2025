@@ -4,17 +4,20 @@ from square import Square
 from circle import Circle
 
 def main():
-    red = Color("Red")
-    blue = Color("Blue")
-    green = Color("Green")
+    red = Color("Красный")
+    blue = Color("Синий")
 
-    rect = Rectangle(4, 5, red)
-    sq = Square(3, blue)
-    circ = Circle(2.5, green)
+    rect = Rectangle(4, 6, red)
+    sq = Square(5, blue)
+    circle = Circle(3, red)
 
-    figures = [rect, sq, circ]
-    for f in figures:
-        print(f)
+    figures = [rect, sq, circle]
+
+    for fig in figures:
+        print(fig)
+        print(f"Площадь: {fig.area()}")
+        print(f"Периметр: {fig.perimeter()}")
+        print("-" * 30)
 
 if __name__ == "__main__":
     main()

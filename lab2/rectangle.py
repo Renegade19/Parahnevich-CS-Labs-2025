@@ -1,8 +1,7 @@
 from figure import Figure
-from color import Color
 
 class Rectangle(Figure):
-    def __init__(self, width: float, height: float, color: Color):
+    def __init__(self, width: float, height: float, color):
         super().__init__(color)
         self.width = width
         self.height = height
@@ -14,4 +13,4 @@ class Rectangle(Figure):
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        return f"{super().__str__()} - Width: {self.width}, Height: {self.height}, Area: {self.area()}, Perimeter: {self.perimeter()}"
+        return f"Прямоугольник {self.width}x{self.height}, цвет {self.color}"

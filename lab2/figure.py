@@ -1,5 +1,5 @@
-from color import Color
 from abc import ABC, abstractmethod
+from color import Color
 
 class Figure(ABC):
     def __init__(self, color: Color):
@@ -14,4 +14,4 @@ class Figure(ABC):
         pass
 
     def __str__(self):
-        return f"{self.__class__.__name__} (Color: {self.color})"
+        return f"{self.__class__.__name__} цвета {self.color}"

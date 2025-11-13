@@ -1,9 +1,8 @@
 from figure import Figure
-from color import Color
 import math
 
 class Circle(Figure):
-    def __init__(self, radius: float, color: Color):
+    def __init__(self, radius: float, color):
         super().__init__(color)
         self.radius = radius
 
@@ -14,4 +13,4 @@ class Circle(Figure):
         return 2 * math.pi * self.radius
 
     def __str__(self):
-        return f"{super().__str__()} - Radius: {self.radius}, Area: {self.area():.2f}, Circumference: {self.perimeter():.2f}"
+        return f"Круг радиусом {self.radius}, цвет {self.color}"
